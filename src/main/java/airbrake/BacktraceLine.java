@@ -35,7 +35,7 @@ public class BacktraceLine {
 	}
 
 	private String methodName(String classAndMethodName) {
-		return classAndMethodName.substring(classAndMethodName.lastIndexOf(".") + 1);
+		return NoticeXml.escapeXml(classAndMethodName.substring(classAndMethodName.lastIndexOf(".") + 1));
 	}
 
 	public BacktraceLine(String className, String fileName, int lineNumber, String methodName) {
